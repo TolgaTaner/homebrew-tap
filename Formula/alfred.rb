@@ -1,4 +1,4 @@
-class Alfred < Formula
+class Alfredtt < Formula
   desc "A Swift-based CLI tool"
   homepage "https://github.com/TolgaTaner/Alfred-main"
   url "https://github.com/TolgaTaner/Alfred-main/releases/download/v1.0.0/Alfred"
@@ -6,10 +6,10 @@ class Alfred < Formula
   version "1.0.0"
 
   def install
-    bin.install "Alfred"
+    bin.install "Alfred" => "alfredtt"
   end
 
   test do
-    system "#{bin}/Alfred", "--version"
+    assert_match "1.0.0", shell_output("#{bin}/alfredtt --version")
   end
 end
